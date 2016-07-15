@@ -122,7 +122,8 @@ textarea {
 }
 
 .container-content{
-    background: rgba(0,0,0,.03);
+/*    background: rgba(0,0,0,.03);*/
+    background: #f5f5f5;
 }
 
 .content{
@@ -132,11 +133,17 @@ textarea {
 
 }
 
+.content p{
+    line-height: 1.7em;
+}
+
 pre{
     background-color: white;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 5px;
-    border:1px solid rgba(0,0,0,.055);
+/*    border:1px solid rgba(0,0,0,.055);*/
+    border: 1px solid #ddd;
+    overflow-x: auto;
 }
 
 
