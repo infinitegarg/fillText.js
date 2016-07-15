@@ -1,0 +1,81 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+    <div class="container">
+
+        <div class="container-effect">
+			<div data-sample="Fill_Text" class="fill-text">
+			</div>
+
+		</div>
+
+
+		<div class="container-content">
+			<div class="content">
+				<p>Let the following JavaScript plugin do the work for you or get into the CSS playground <a href="#tutorial">here</a><br>P.S. It is a purely CSS effect.
+				<h1>Installation</h1>
+				<pre>
+&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;fillText.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(function(){
+      $(&quot;.fill-text&quot;).fillText({
+        color: &quot;black&quot;,
+        text_bg: &quot;#ccc&quot;, 
+        duration: &quot;2s&quot;,
+      });
+  });
+&lt;/script&gt;
+...
+
+&lt;div <strong>data-sample=&quot;Fill_Text&quot;</strong> class=&quot;element&quot;&gt;&lt;/div&gt;
+				</pre>
+
+				<br>
+				<h1>Options</h1>
+				<p>With default values:</p>
+				<pre>
+color : &quot;#ccc&quot;,
+text_bg : &quot;black&quot;,
+fill_value : 7,
+duration : &quot;2s&quot;
+				</pre>
+			</div>
+		</div>
+
+	</div>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/main.js"></script>
+
+        <script type="text/javascript">
+        $(".fill-text").fillText({
+        	// fill_value: 5,
+        	// color: "#ccc",
+        	// text_bg: "blue",
+        	// duration: 5
+        	
+        })
+        </script>
+
+    </body>
+</html>
