@@ -110,7 +110,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-h1{
+h1,h2{
     margin: 0;
     padding: .67em 0;
 }
@@ -138,9 +138,6 @@ h1{
     line-height: 1.7em;
 }
 
-h1 img{
-    width: .75em;
-}
 
 pre{
     background-color: white;
@@ -248,16 +245,18 @@ figcaption{
     margin: 1em 0 2em
 }
 
-#tutorial img{
+a.link img{
     opacity: .5;
     transition: .2s ease;
+    width: .75em;
+    margin-bottom: 2px;
 }
 
-h1:target{
+h1:target,h2:target{
     color: #e74c3c;
 }
 
-#tutorial img:hover,#tutorial img:active{
+a.link img:hover,a.link img:active{
     opacity: 1;
     transition: .2s ease;
 }
@@ -297,7 +296,10 @@ h1:target{
 }
 
 
-
+p span{
+    color: #e74c3c; 
+    font-family: 'Source Code Pro' ;
+}
 
 
 
