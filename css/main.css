@@ -110,6 +110,10 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+h1{
+    margin: 0;
+    padding: .67em 0;
+}
 
 .container{
     padding-top: 30px;
@@ -242,6 +246,20 @@ figcaption{
     font-style: italic;
     font-size: .85em;
     margin: 1em 0 2em
+}
+
+#tutorial img{
+    opacity: .5;
+    transition: .2s ease;
+}
+
+h1:target{
+    color: #e74c3c;
+}
+
+#tutorial img:hover,#tutorial img:active{
+    opacity: 1;
+    transition: .2s ease;
 }
 
 @media screen and (min-width:767px){

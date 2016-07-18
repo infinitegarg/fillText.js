@@ -67,7 +67,7 @@ duration : &quot;2s&quot;</pre>
                 
                 
 				<br>
-                <h1>CSS Playground <a href="#css_playground"><img src="img/link-icon.svg"></a></h1>
+                <h1 id="tutorial">CSS Playground <a href="#tutorial"><img src="img/link-icon.svg"></a></h1>
                 <p><strong>-webkit-background-clip</strong> is a powerful css property still under experiments. I was going through various usecases when this effect struck me. It can be used as a light-weight css-only loader, a cool text effect or in my case to show skillset efficiency.<br>
 		Let's start with the basic HTML structure required.
                 </p>
@@ -105,18 +105,25 @@ duration : &quot;2s&quot;</pre>
 }</pre>
                 <br>
                 <p>The <strong>::after</strong> is where the top layer will reside. Set the background color to the desired fill color and  <strong>-webkit-background-clip : text</strong> will clip the background to take the shape of text. The width of the background will give the value to the effect.
-                    <br><br>Note: <strong>-webkit-text-fill-color : transparent</strong> is important to clear the fill color of the text and make it transparent for background to fill.</p>
+                    <br><br>Note: <strong>-webkit-text-fill-color : transparent</strong> is important to clear the fill color of the text and make it transparent for the background to fill.</p>
                 
                 <pre>.fill-text::after{
   content:attr(data-sample);  /* get content from HTML */
   position:absolute;          /* to overlap the base text */
   top:0;
   left:0;
+  width:60%             /* this sets the width of the fill color */
   background:black;       /* Set the color to desired fill color */
   height:100%; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }</pre>
+                <br>
+                <p>Now, lets give life to the effect</p>
+                <h2>The animation</h2>
+                <p></p>
+                
+<!--                <p>That's it! Now its your time to make the internet awesome.</p>-->
                 
 			</div>
 		</div>
