@@ -225,6 +225,10 @@ pre{
     color: rgba(255,255,255,1);
 }
 
+.well{
+    background: rgba(255, 176, 176, 0.3);  
+    padding: 1em;
+}
 
 
 @media screen and (min-width:767px){
