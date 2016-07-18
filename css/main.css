@@ -217,6 +217,8 @@ pre{
 
 .container-buttons a img{
     width: 22px;
+    display: inline-block;
+    margin-top: -3px;
     margin-right: 5px;
 }
 
