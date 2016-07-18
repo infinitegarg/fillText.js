@@ -69,7 +69,7 @@ duration : &quot;2s&quot;</pre>
 				<br>
                 <h1>CSS Playground <a href="#css_playground"><img src="img/link-icon.svg"></a></h1>
                 <p><strong>-webkit-background-clip</strong> is a powerful css property still under experiments. I was going through various usecases when this effect struck me. It can be used as a light-weight css-only loader, a cool text effect or in my case to show skillset efficiency.<br>
-		Lets's start with the basic HTML structure required.
+		Let's start with the basic HTML structure required.
                 </p>
                 
                 <p class="well">Attention: Some of the techniques we’ll be using are experimental and might not work in older browsers.</p>
@@ -84,23 +84,39 @@ duration : &quot;2s&quot;</pre>
                 <h2>The CSS</h2>
                 <p>We will be creating two layers, one containing the base color of the text and other to achieve the fill effect.<br>
                 <br>
-                Lets's give the basic styling to the text.
+                Let's give the basic styling to the text.
                     <pre>.fill-text{
-  font-size:4.5em;        // set accordingly
+  font-size:4.5em;        /* set accordingly */
   font-weight:700;   
-  position:relative;      // this is important to give scope to the ::after content
-  display:inline-block;   // this will confine the width of the content
-  color:#ccc;             // base text color
+  position:relative;      /* this is important to give scope to the ::after content */
+  display:inline-block;   /* this will confine the width of the content */
+  color:#ccc;             /* base text color */
 }
                     </pre>
-                <br>
-                    
+                <br><br>
+                
+                <figure>
+                <img src="img/illustration.jpg">
+                    <figcaption>Clipping the background to text</figcaption>
+                </figure>
                 <p>The <strong>::before</strong> will contain the base color text layer. <br><strong>attr(data-sample)</strong> will fetch the content of the data-attribute used in the HTML markup. This way, our text will stay dynamic in CSS.</p>
                 <pre>.fill-text::before{
   content:attr(data-sample);
 }</pre>
                 <br>
-                <p>The <strong>::after</strong> is where the top layer will reside. We will set the background color to the desired fill color and  <strong>-webkit-background-clip : text</strong></p>
+                <p>The <strong>::after</strong> is where the top layer will reside. Set the background color to the desired fill color and  <strong>-webkit-background-clip : text</strong> will clip the background to take the shape of text. The width of the background will give the value to the effect.
+                    <br><br>Note: <strong>-webkit-text-fill-color : transparent</strong> is important to clear the fill color of the text and make it transparent for background to fill.</p>
+                
+                <pre>.fill-text::after{
+  content:attr(data-sample);  /* get content from HTML */
+  position:absolute;          /* to overlap the base text */
+  top:0;
+  left:0;
+  background:black;       /* Set the color to desired fill color */
+  height:100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}</pre>
                 
 			</div>
 		</div>
